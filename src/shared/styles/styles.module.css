@@ -1,0 +1,66 @@
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding: 0;
+  margin: 0;
+  color: #f2dffd;
+  text-transform: capitalize;
+}
+
+.modalHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalClose {
+  color: rgb(255, 74, 74);
+  font-size: 28px;
+  font-weight: 500;
+  align-self: flex-start;
+  cursor: pointer;
+}
+
+.btn {
+  cursor: pointer;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+
+.btn:disabled {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.info {
+  composes: btn;
+  background-color: #7f34f8;
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+.info:hover {
+  background-color: #7017ff;
+}
+
+.danger {
+  composes: btn;
+  background-color: #ef5350;
+  color: #fff;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 0 15px;
+  }
+}

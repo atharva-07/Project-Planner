@@ -1,0 +1,138 @@
+.container {
+  composes: container from '../../shared/styles/styles.module.css';
+  padding: 15px 0 30px;
+}
+
+.containerHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.containerHeader button {
+  font-size: 15px;
+}
+
+.ui {
+  height: calc(100vh - 140px);
+  display: grid;
+  grid-template-rows: 1fr;
+}
+
+.columns {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  overflow-x: auto;
+}
+
+.columns::after {
+  content: '';
+  flex: 0 0 10px;
+}
+
+.columns > * {
+  flex: 0 0 auto;
+}
+
+.columns > *:not(:first-child) {
+  margin-left: 10px;
+}
+
+.column {
+  width: 300px;
+  height: calc(100% - 27px);
+}
+
+.column header {
+  background: #000;
+  border: 1px solid #2f3338;
+  border-bottom: 0;
+  color: #fff;
+  font-weight: 500;
+  line-height: 46px;
+  font-size: 17px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.trash {
+  position: absolute;
+  color: #f03535;
+  right: 10px;
+  top: 7px;
+  cursor: pointer;
+}
+
+.column footer {
+  line-height: 56px;
+  background: #000;
+  border: 1px solid #2f3338;
+  border-top: 0;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.column footer .add {
+  cursor: pointer;
+  border: 1px solid gray;
+  color: #fff;
+  background-color: #333030;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.column footer .add:hover {
+  background: #292525;
+}
+
+.column > * {
+  background-color: #000;
+  color: #000;
+  border-left: 1px solid #2f3338;
+  border-right: 1px solid #2f3338;
+  padding: 0 10px;
+}
+
+.column ul {
+  list-style: none;
+  margin: 0;
+  max-height: calc(100% - 72px);
+  overflow-y: auto;
+}
+
+.addButton {
+  height: 250px;
+  width: 250px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px dotted gray;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 5px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .ui {
+    height: calc(100vh - 195px);
+  }
+}
